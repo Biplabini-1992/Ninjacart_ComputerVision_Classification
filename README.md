@@ -124,7 +124,7 @@ Build a multiclass image classification model that can correctly predict whether
       
       - Confusion matrix using Seaborn heatmaps
 
-### Testing & Inference
+## Testing & Inference
   
   - Evaluated the best-performing model on the test dataset (351 images).
   
@@ -132,18 +132,19 @@ Build a multiclass image classification model that can correctly predict whether
   
   - Visualized predicted vs actual class labels.
 
-### Results & Insights
-Model	Validation Accuracy	Test Accuracy	Remarks
-Custom CNN	~84%	~80%	Good baseline
-CNN + Regularization	~88%	~85%	Reduced overfitting
-VGG16 (Fine-tuned)	~92%	~89%	Strong performance
-ResNet50	~93%	~90%	Best overall
-MobileNetV2	~91%	~88%	Lightweight, fast
+## Results & Insights
+  | Model | Train Accuracy | Test Accuracy | Remarks |
+  |:------|:---------------:|:--------------:|:--------|
+  | Custom CNN | 80% | 70% | Baseline model; underfitting slightly |
+  | CNN Revamp | 87% | 83% | Improved generalization using Dropout & BatchNorm |
+  | VGG19 | 95% | 90% | Excellent performance; pretrained model (Transfer Learning) |
+  | ResNet101 | 98% | 29% | Severe overfitting; needs regularization or fine-tuning |
+  | MobileNet | 96% | 84% | Lightweight and efficient; good balance between speed & accuracy |
 
-✅ Best Model: ResNet50 (Transfer Learning)
-✅ Key Takeaway: Pretrained models significantly outperform CNNs built from scratch on small datasets.
+✅ Best Model: VGG19 (Transfer Learning) — achieved the highest and most stable performance with strong generalization on unseen data.
+✅ Key Takeaway: Transfer learning models like VGG19 and MobileNet clearly outperform CNNs built from scratch, offering high accuracy with limited data and less training time.
 
-### Visualizations
+## Visualizations
 
   - Class distribution histogram
   
@@ -155,9 +156,11 @@ MobileNetV2	~91%	~88%	Lightweight, fast
   
   - TensorBoard logs for model performance tracking
 
-### Tools & Libraries Used
-  - Deep Learning	- TensorFlow, Keras
-  - Data Manipulation	- NumPy, Pandas
-  - Visualization	- Matplotlib, Seaborn
-  - Image Processing	- OpenCV
-  - Logging	- TensorBoard
+## Tools & Libraries Used
+  | Category | Tools / Libraries |
+  |:---------|:-----------------|
+  | Deep Learning | TensorFlow, Keras |
+  | Data Manipulation | NumPy, Pandas |
+  | Visualization | Matplotlib, Seaborn |
+  | Image Processing | OpenCV |
+  | Logging | TensorBoard |
