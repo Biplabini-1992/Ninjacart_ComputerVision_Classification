@@ -1,4 +1,4 @@
-# Ninjacart_ComputerVision_Classification — Vegetable Image Classifier
+# Ninjacart — Vegetable Image Classifier
 Domain: Computer Vision • Tech Stack: TensorFlow | Keras | Transfer Learning | CNN | Image Augmentation
 
 ## Overview
